@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Journal Infiniti Kapital</title>
+  <style>
+    body { background-color: #0f172a; color: white; font-family: Arial, sans-serif; padding: 2rem; }
+    h1 { text-align: center; color: #38bdf8; }
+    form { max-width: 600px; margin: auto; background: #1e293b; padding: 2rem; border-radius: 10px; }
+    label { display: block; margin-top: 1rem; }
+    input, select, textarea {
+      width: 100%; padding: 0.5rem; margin-top: 0.3rem;
+      background: #334155; color: white; border: none; border-radius: 5px;
+    }
+    button {
+      margin-top: 1.5rem; background-color: #38bdf8;
+      border: none; padding: 1rem; width: 100%; color: black;
+      font-weight: bold; border-radius: 5px; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Journal Infiniti Kapital</h1>
+  <form action="https://script.google.com/macros/s/AKfycbzLBrB2opZypSmp0cncVmsFxDLUypT4ng-tOdXGeA4tAn0bFV7nR8Orc5Ax9VttEl_qpA/exec" method="POST">
+    <label for="fecha">Fecha:</label>
+    <input type="date" name="Fecha" required />
+
+    <label for="par">Par:</label>
+    <input type="text" name="Par" placeholder="Ej: EURUSD" required />
+
+    <label for="setup">Setup:</label>
+    <input type="text" name="Setup" placeholder="Ej: BOS + FVG" required />
+
+    <label for="rr">Riesgo/Beneficio (RR):</label>
+    <input type="number" step="0.01" name="RR" required />
+
+    <label for="resultado">Resultado:</label>
+    <select name="Resultado" required>
+      <option value="">Seleccionar</option>
+      <option value="Ganancia">✅ Ganancia</option>
+      <option value="Pérdida">❌ Pérdida</option>
+      <option value="BE">🔁 Break Even</option>
+    </select>
+
+    <label for="comentario">Comentario:</label>
+    <textarea name="Comentario" rows="3" placeholder="Observaciones..."></textarea>
+
+    <button type="submit">Registrar Entrada</button>
+  </form>
+</body>
+</html>
